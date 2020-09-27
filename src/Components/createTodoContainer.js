@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CreateTodoForm from './createTodoForm';
 
 const initialState = {
   todoDescription: '',
@@ -35,6 +36,7 @@ export default class CreateTodo extends Component {
     return(
       <div style={{ marginTop: 10 }}>
         <h3>Create new Todo</h3>
+        <CreateTodoForm handleChange={this.handleOnChange} handleSubmit={this.handleSubmit} description={this.state.todoDescription} responsible={this.state.todoResponsible} priority={this.state.todoPriority}/>
       </div>
     )
   }

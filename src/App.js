@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import TodoList from './Components/todoList';
-import CreateTodo from './Components/createTodo';
+import CreateTodoContainer from './Components/createTodoContainer';
 import EditTodo from './Components/editTodo';
 
 export default class App extends Component {
@@ -26,7 +26,7 @@ export default class App extends Component {
             </div>
           </nav>
           <Route exact path='/' component={TodoList} />
-          <Route exact path='/createtodo' component={CreateTodo} />
+          <Route exact path='/createtodo' component={CreateTodoContainer} />
           <Route exact path='edittodo/:id' component={EditTodo} /> 
         </div>
       </Router>
